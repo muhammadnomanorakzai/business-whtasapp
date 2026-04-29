@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  --color-primary: #DFFF00;
+  --color-primary-container: #DFFF00;
+  --color-on-primary-container: #000000;
+  
+  --color-surface: #050505;
+  --color-surface-dim: #0A0A0A;
+  --color-surface-bright: #121212;
+  
+  --color-on-surface: #FFFFFF;
+  --color-on-surface-variant: #888888;
+  
+  --color-outline: #1A1A1A;
+  --color-outline-variant: #333333;
+
+  --shadow-ambient: 0px 4px 20px rgba(0, 0, 0, 0.5);
+
+  --radius-xs: 0rem;
+  --radius-sm: 0rem;
+  --radius-md: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.25rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased uppercase;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-black tracking-tight uppercase;
+  }
+}
+
+.micro-label {
+  @apply text-[10px] uppercase tracking-[0.2em] text-[#666] font-bold block mb-2;
+}
+
+.display-title {
+  @apply text-6xl md:text-8xl lg:text-9xl font-extrabold leading-[0.85] tracking-[-0.06em] uppercase;
+}
+
+.metric-value {
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter;
+}
+
+.accent-text {
+  @apply text-primary;
+}
